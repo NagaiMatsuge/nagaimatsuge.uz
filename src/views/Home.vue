@@ -99,7 +99,7 @@ export default {
     selectionSort() {
       let minIdx, temp, lengths;
       let self = this;
-      setTimeout(function () {
+      setTimeout(function() {
         minIdx = self.loopC;
         for (let j = self.loopC + 1; j < self.len; j++) {
           if (self.numbers[j] < self.numbers[minIdx]) {
@@ -130,7 +130,7 @@ export default {
     },
     bubbleSort() {
       let self = this;
-      setTimeout(function () {
+      setTimeout(function() {
         for (let j = 1; j <= self.loopC; j++) {
           if (self.numbers[j - 1] > self.numbers[j]) {
             let temp = self.numbers[j - 1];
@@ -165,7 +165,7 @@ export default {
   created() {
     this.$store.commit("sorting/setNumbers");
     let self = this;
-    this.$nextTick(function () {
+    this.$nextTick(function() {
       self.target = self.$refs.num_container.children;
       self.$store.commit("sorting/setElems", self.$refs.num_container);
     });

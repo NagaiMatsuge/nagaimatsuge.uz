@@ -5,7 +5,7 @@
       class="flex justify-between px-3 items-center md:justify-around w-full"
     >
       <div v-if="!opened" class="text-3xl font-bold">
-        <router-link to="/">Visualization</router-link>
+        Visualization
       </div>
       <div class="hidden md:block text-gray-600">
         <ul class="flex justify-around text-xl cursor-pointer">
@@ -177,7 +177,6 @@ export default {
     emit_sort() {
       if (!this.$store.getters["sorting/isSorted"]) {
         this.$emit("sort");
-        this.$store.commit("sorting/toggleSorted");
       }
     },
   },
