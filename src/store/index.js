@@ -1,12 +1,7 @@
-import { createStore } from 'vuex'
-
+import { createStore } from "vuex";
+import sorting from "./sorting";
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    sorting: sorting,
+  },
+});
